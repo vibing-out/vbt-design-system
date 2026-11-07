@@ -45,7 +45,7 @@ All colors come from `tokens.json`; components never use raw hex.
 
 - **Surfaces.** `surface` is the page. `surface-raised` is every card. `surface-sunk` is wells and inputs. `surface-inverse` is the dark navy used for the tracker hero card, the receipt pass and the batch pill, and at most one such surface per screen.
 - **Text.** `ink` for primary, `ink-muted` for secondary. On `surface-inverse`, `on-inverse` and `on-inverse-muted`.
-- **Orange has three roles, never mixed.** `brand-orange` is a fill (primary button, brand areas) with `on-accent` navy text. `accent-mark` is a small meaningful mark (the current stage dot). `accent-text` is orange text. Light-mode `brand-orange` fails as text and as a small mark, which is why the other two exist.
+- **Orange has three roles, never mixed.** `brand-orange` is a fill (primary button, brand areas) with `on-accent` navy text, and on `surface-inverse` only it may also be the current-stage mark and label. `accent-mark` is a small meaningful mark (the current stage dot). `accent-text` is orange text. Light-mode `brand-orange` fails as text and as a small mark, which is why the other two exist.
 - **Status colors** come in pairs: `status-*` for text, dot and icon; `status-*-bg` for the badge or callout fill. Only exceptional states (challenged, discarded, spoiled) get status colors. Normal progress uses ink and the orange current-stage mark.
 - **Lines.** `line` is decorative only. `line-strong` is any edge that defines a control.
 - **Contrast.** Every pair a component uses must be listed under `contrast.pairs` and pass `node scripts/check-contrast.mjs`. Add the pair before using it.
